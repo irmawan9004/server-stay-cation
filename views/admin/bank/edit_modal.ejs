@@ -1,0 +1,74 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="editModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">UPDATE BANK</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form
+        action="/admin/bank?_method=PUT"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="name">Proof Payment</label>
+            <input type="file" class="form-control" name="image" />
+          </div>
+          <div class="form-group">
+            <label for="name">Bank Name</label>
+            <input
+              type="text"
+              class="form-control bankName"
+              name="bankName"
+              placeholder="Enter name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Account Number</label>
+            <input
+              type="text"
+              class="form-control accountNumber"
+              name="accountNumber"
+              placeholder="Enter name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Cardholder</label>
+            <input
+              type="text"
+              class="form-control name"
+              name="name"
+              placeholder="Enter Cardholder"
+              required
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input type="hidden" class="id" name="id" />
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">UPDATE</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
